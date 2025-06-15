@@ -1,58 +1,35 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function WW2StrategyGame() {
   return (
-    <div className="p-8 space-y-12 max-w-6xl mx-auto">
-      <motion.h1
-        className="text-4xl font-bold text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Command. Conquer. Rewrite History.
-      </motion.h1>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        <Card className="shadow-xl">
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Global Strategy</h2>
-            <p>
-              Take charge of the world’s most powerful nations in a turn-based strategy game set during the most pivotal conflict of the 20th century.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="shadow-xl">
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Historical Immersion</h2>
-            <p>
-              Deploy your troops, manage resources, and forge alliances in an experience shaped by the real events of World War II.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="shadow-xl">
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Tactical Depth</h2>
-            <p>
-              Balance economic power with military might. Strategically position forces to outmaneuver your opponents on land, sea, and air.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white px-4"
+      style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1580745807360-0b5c04f40916?auto=format&fit=crop&w=1920&q=80)' }}
+    >
       <motion.div
-        className="text-center mt-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center max-w-3xl"
       >
-        <Button asChild className="text-lg px-6 py-3 rounded-2xl">
-          <a href="https://harro11.github.io/Axis-vs-Allies-1942/" target="_blank" rel="noopener noreferrer">
-            Play <ArrowRight className="ml-2 inline" />
+        <h1 className="text-5xl md:text-7xl font-extrabold drop-shadow-lg mb-6">
+          Command. Conquer. Rewrite History.
+        </h1>
+        <p className="text-lg md:text-2xl drop-shadow-sm mb-10">
+          Dive into a tactical World War II experience where every decision shapes the outcome.
+        </p>
+
+        <Button
+          asChild
+          className="text-lg px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 shadow-xl transition"
+        >
+          <a
+            href="https://harro11.github.io/Axis-vs-Allies-1942/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Play Now <ArrowRight className="ml-2 inline" />
           </a>
         </Button>
       </motion.div>
