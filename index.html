@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WW2 Strategy Game</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Meta Tags for SEO and Social Sharing -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Command nations in a turn-based WW2 strategy game. Deploy troops, manage resources, and rewrite history in Axis & Allies.">
+  <meta name="keywords" content="WW2, strategy game, Axis and Allies, historical game, tactical game">
+  <meta name="author" content="Harro11">
+  <!-- Open Graph for Social Media -->
+  <meta property="og:title" content="WW2 Strategy Game - Axis & Allies">
+  <meta property="og:description" content="Lead nations in a strategic WW2 experience. Play now and rewrite history!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harro11.github.io/Axis-v-Allies/">
+  <meta property="og:image" content="https://harro11.github.io/Axis-v-Allies/assets/og-image.jpg"> <!-- Update with actual image URL -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WW2 Strategy Game - Axis & Allies">
+  <meta name="twitter:description" content="Lead nations in a strategic WW2 experience. Play now!">
+  <meta name="twitter:image" content="https://harro11.github.io/Axis-v-Allies/assets/og-image.jpg"> <!-- Update with actual image URL -->
+  <title>Axis & Allies - WW2 Strategy Game</title>
+  <!-- Use latest Tailwind CSS v3.x from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Lottie Player (optional; remove if no animations are used) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@1.7.0/dist/lottie-player.min.js"></script>
   <style>
+    /* Fade-in animation */
     .fade-in-up {
       opacity: 0;
       transform: translateY(20px);
@@ -18,48 +36,60 @@
         transform: translateY(0);
       }
     }
+    /* Ensure buttons are touch-friendly */
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.125rem;
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-
-  <div class="max-w-6xl mx-auto px-6 py-16 space-y-12">
-    <h1 class="text-4xl font-extrabold text-center fade-in-up">
+<body class="bg-gray-900 text-white font-sans antialiased">
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Header -->
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-center fade-in-up">
       Command. Conquer. Rewrite History.
     </h1>
 
+    <!-- Feature Grid -->
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up transition-transform hover:scale-105">
         <h2 class="text-xl font-bold mb-2">Global Strategy</h2>
-        <p>
-          Take charge of the world’s most powerful nations in a turn-based strategy game set during the most pivotal conflict of the 20th century.
+        <p class="text-gray-300">
+          Take charge of the world’s most powerful nations in a turn-based strategy game set during the pivotal conflict of World War II.
         </p>
       </div>
 
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up transition-transform hover:scale-105">
         <h2 class="text-xl font-bold mb-2">Historical Immersion</h2>
-        <p>
-          Deploy your troops, manage resources, and forge alliances in an experience shaped by the real events of World War II.
+        <p class="text-gray-300">
+          Deploy troops, manage resources, and forge alliances in an experience shaped by the real events of World War II.
         </p>
       </div>
 
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl fade-in-up transition-transform hover:scale-105">
         <h2 class="text-xl font-bold mb-2">Tactical Depth</h2>
-        <p>
-          Balance economic power with military might. Strategically position forces to outmaneuver your opponents on land, sea, and air.
+        <p class="text-gray-300">
+          Balance economic power with military might. Strategically position forces to outmaneuver opponents on land, sea, and air.
         </p>
       </div>
     </div>
 
-    <div class="text-center mt-10 fade-in-up">
-      <a href="https://harro11.github.io/Axis-v-Allies/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-yellow-500 text-black text-lg rounded-full hover:bg-yellow-400 transition">
-        Play
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <!-- Call to Action -->
+    <div class="text-center mt-12 fade-in-up">
+      <a 
+        href="https://harro11.github.io/Axis-v-Allies/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center btn bg-yellow-500 text-black rounded-full hover:bg-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2" 
+        aria-label="Play Axis & Allies Strategy Game"
+      >
+        Play Now
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </a>
     </div>
   </div>
-
 </body>
 </html>
-
